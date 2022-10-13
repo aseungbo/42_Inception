@@ -1,6 +1,5 @@
 #!/bin/sh
 
-sleep 2
 chown -R www-data:www-data /var/www/
 
 if [ ! -f "/var/www/html/wordpress/index.php" ]; then
@@ -11,6 +10,5 @@ if [ ! -f "/var/www/html/wordpress/index.php" ]; then
 	wp user create $WORDPRESS_USER $WORDPRESS_EMAIL --role=author --user_pass=$WORDPRESS_PASSWORD && \
 	wp plugin update --all
 	"
-	@echo "wp cli setup Done." 
 fi
 exec /usr/sbin/php-fpm7.3 -F

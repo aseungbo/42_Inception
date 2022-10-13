@@ -16,10 +16,12 @@
 user                    = mysql
 pid-file                = /run/mysqld/mysqld.pid
 socket                  = /run/mysqld/mysqld.sock
+
 ###############################
-# 지정된 port 3306을 열어준다.
+# port 3306 설정
 port                   = 3306
 ###############################
+
 basedir                 = /usr
 datadir                 = /var/lib/mysql
 tmpdir                  = /tmp
@@ -28,8 +30,9 @@ lc-messages-dir         = /usr/share/mysql
 
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
+
 ###############################
-# 컨테이너 밖에서 접속 할 수 있도록 bind_adress를 푼다.
+# 컨테이너 밖에서 접속 할 수 있도록 bind_adress 설정
 #bind-address            = 127.0.0.1
 ###############################
 
