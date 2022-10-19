@@ -1,10 +1,10 @@
 NAME	= inception
 
-DB_PATH		:= ./data
-HOST_LINK	:=
+# DB_PATH		:= ./data
+# HOST_LINK	:=
 
-# DB_PATH		:= /home/seuan/data
-# HOST_LINK	:= "127.0.0.1	seuan.42.fr" > /etc/hosts
+DB_PATH		:= $home/data
+HOST_LINK	:= "127.0.0.1	seuan.42.fr" > /etc/hosts
 
 all		:	$(NAME)
 
