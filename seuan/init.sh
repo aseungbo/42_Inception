@@ -1,3 +1,4 @@
+# Repository 인덱스 업데이트
 apt-get update
 
 # sudo 설치
