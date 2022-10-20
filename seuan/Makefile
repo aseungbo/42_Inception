@@ -9,16 +9,15 @@ $(NAME)	:
 	@sudo mkdir -p $(DB_PATH)/mariadb/
 	@sudo mkdir -p $(DB_PATH)/wordpress/
 	@sudo echo $(HOST_LINK)
-	docker-compose -f ./srcs/docker-compose.yaml up --build -d
+	@sudo docker-compose -f ./srcs/docker-compose.yaml up --build -d
 
 # docker-compose down and remove volumes
 clean	: 
-	docker-compose -f ./srcs/docker-compose.yaml down --rmi "all" --volumes
+	@sudo sudo docker-compose -f ./srcs/docker-compose.yaml down --rmi "all" --volumes
 
 ## delete local volume
 fclean	: clean 
-	rm -rf $(DB_PATH)/mariadb/*
-	rm -rf $(DB_PATH)/wordpress/*
+	@sudo sudo rm -rf $(DB_PATH)
 
 re	: fclean all
 
