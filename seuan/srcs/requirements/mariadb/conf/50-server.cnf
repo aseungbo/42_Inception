@@ -32,8 +32,8 @@ lc-messages-dir         = /usr/share/mysql
 # localhost which is more compatible and is not less secure.
 
 ###############################
-# 컨테이너 밖에서 접속 할 수 있도록 bind_adress 설정
-#bind-address            = 127.0.0.1
+# 모든곳을 통해 database에 접근해야하기 때문에 127.0.0.1을 0.0.0.0으로 바꿔줌
+bind-address            = 0.0.0.0
 ###############################
 
 #

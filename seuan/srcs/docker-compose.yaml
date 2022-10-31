@@ -53,14 +53,14 @@ volumes:
   db_volume:
     driver: local
     driver_opts:
-      type: none
+      type: volume
       device: home/seuan/data/mariadb
       o: bind
 
   wp_volume:
     driver: local
     driver_opts:
-      type: none
+      type: volume
       device: home/seuan/data/wordpress
       o: bind
 
